@@ -31,12 +31,12 @@ services:
   db:
     image: mysql:5.7
     container_name: mysql
-    restart: unless-stopped
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: Coimbra266!
       MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: secret
+      # MYSQL_USER: root
+      # MYSQL_PASSWORD: secret
     ports:
       - "3306:3306"
     networks:
