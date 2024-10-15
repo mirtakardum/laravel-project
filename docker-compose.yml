@@ -11,8 +11,8 @@ services:
     networks:
       - laravel
     environment:
-      DB_HOST: mysql
-      DB_PASSWORD: root
+      DB_HOST: 127.0.0.1
+      DB_PASSWORD: Coimbra266!
 
   # Nginx service
   web:
@@ -33,7 +33,7 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Coimbra266!
+      MYSQL_ROOT_PASSWORD: 'Coimbra266!'
       MYSQL_DATABASE: laravel
       # MYSQL_USER: root
       # MYSQL_PASSWORD: secret

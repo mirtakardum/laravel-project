@@ -2,6 +2,7 @@
 
 use App\Models\Quote;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuoteController;
 
 Route::middleware(['testing'])->group(function () {
     Route::get('/', function () {
@@ -9,9 +10,4 @@ Route::middleware(['testing'])->group(function () {
     });
 });
 
-Route::get('/rand-quote', function () {
-    
-    $quote = Quote::inRandomOrder()->first();
-    
-    return view('rand-quote')->with('quote', $quote);
-});
+Route::get('/rand-quote', [QuoteController::class, 'index']);
