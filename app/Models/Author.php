@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Quote extends Model
+class Author extends Model
 {
     use HasFactory;
-    protected $fillable = ['text', 'author_id'];
+    protected $fillable = ['name'];
 
-    public function author()
+    public function quotes()
     {
-        return $this->belongsTo(Author::class);
+        return $this->hasMany(Quote::class);
     }
 }

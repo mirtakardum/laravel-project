@@ -2,13 +2,11 @@
 <html>
 <body>
     <div style="text-align: center; margin-top: 50px;">
-        @if($quote)
-            <blockquote>
-                <p>{{ $quote->text }}</p>
-            </blockquote>
-        @else
-            <p>No quote available at the moment.</p>
-        @endif
+        <p>
+            <strong>{{ $quote->text }}</strong>
+            – {{ $quote->author->name ?? 'Unknown Author' }}
+        </p>
+
     </div>
 </body>
 </html>

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Quote;
+use App\Models\Author;
 
 class QuoteSeeder extends Seeder
 {
@@ -14,5 +15,6 @@ class QuoteSeeder extends Seeder
     public function run(): void
     {
         Quote::factory()->count(10)->create();
+
     }
 }

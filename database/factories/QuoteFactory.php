@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Quote;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Author;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Quote>
@@ -16,6 +17,7 @@ class QuoteFactory extends Factory
     {
         return [
             'text' => $this->faker->sentence,
+            'author_id' => Author::inRandomOrder()->first()->id,
         ];
     }
 }
