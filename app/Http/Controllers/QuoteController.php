@@ -13,7 +13,7 @@ class QuoteController extends Controller
 
         $quote = Cache::remember('quote.random', 60, function () {
 
-            return $quote = Quote::with('author')->first();
+            return $quote = Quote::with('author')->inRandomOrder()->first();
         });
 
         return view('/rand-quote', compact('quote'));
